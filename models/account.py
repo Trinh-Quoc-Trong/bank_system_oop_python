@@ -19,7 +19,24 @@ class Account:
         self.so_tai_khoan = so_tai_khoan
         self.chu_tai_khoan = chu_tai_khoan
         self.so_du = so_du
+    
+    def __str__(self) -> str:
+        """get information of account
         
+        Keyword arguments:
+        
+        Return: return information of account
+        """
+        return f"number account: {self.so_tai_khoan}, chu tai khoan: {self.chu_tai_khoan.name}, money: {self.so_du}"
+    
+    def get_so_du(self) -> float:
+        """get so du of account
+
+        Returns:
+            float: so du
+            
+        """
+        return self.so_du
         
     def nap_money(self, so_tien: float):
         """
